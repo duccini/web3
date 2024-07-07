@@ -1,0 +1,10 @@
+Token Address:
+0x640518c472b4c35897629bde9690ca3232d71190
+
+Token Explorer:
+https://sepolia.etherscan.io/token/0x640518C472B4c35897629bDE9690cA3232d71190
+
+https://sepolia.etherscan.io/address/0x640518c472b4c35897629bde9690ca3232d71190
+
+Transaction:
+https://sepolia.etherscan.io/tx/0x6330665b20d308917d407481d416654e96f4352a4265e9160c89570810b8517a

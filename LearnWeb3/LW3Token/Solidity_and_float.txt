@@ -1,0 +1,16 @@
+Essentially, Solidity does not support floating point numbers - that is decimals. Also, since ERC20 tokens
+ deal with money, using floating point numbers is a bad idea.
+
+As an example, consider the simple calculation (1/3) * 3 in a language that supports floating point 
+numbers. What do you think this returns?
+
+If you thought it would return 1, you are wrong.
+
+Due to inaccuracies in floating point calculations, since computers cannot represent an infinite number 
+of digits, (1/3) * 3 actually yields something like 0.999999999.
+
+As such, when representing financial currencies, decimals are not used due to calculation errors. As an 
+alternative, we represent every currency as an amount relative to the smallest indivisible part of that 
+currency. For example, $1 is represented as 100 cents, since you can't get smaller than 1 cent when 
+dealing with USD. In that numbering system, 1 cent is just 1, not 0.01. $0.33 is represented as 33, 
+not (1/3).
