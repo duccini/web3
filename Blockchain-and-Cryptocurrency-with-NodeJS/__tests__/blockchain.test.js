@@ -1,5 +1,5 @@
-const Blockchain = require("../src/blockchain");
-const Block = require("../src/block");
+const Blockchain = require("../core/blockchain");
+const Block = require("../core/block");
 
 describe("Blockchain", () => {
   let bc1, bc2;
