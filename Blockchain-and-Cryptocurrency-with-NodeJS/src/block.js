@@ -18,10 +18,12 @@ class Block {
     `;
   }
 
+  // Genesis Block
   static genesis() {
     return new this("Genesis time", "-------", "first-hash", []);
   }
 
+  // Mine a new Block
   static mineBlock(lastBlock, data) {
     const timestamp = Date.now();
     const lastHash = lastBlock.hash;
@@ -30,9 +32,15 @@ class Block {
     return new this(timestamp, lastHash, hash, data);
   }
 
+  // Generate a Hash
   static hash(timestamp, lastHash, data) {
     // SHA256 retorna um obj
     return SHA256(`${timestamp}${lastHash}${data}`).toString();
+  }
+
+  static blockHash(block) {
+    const { timestamp, lastHash, data } = block;
+    return Block.hash(timestamp, lastHash, data);
   }
 }
 
